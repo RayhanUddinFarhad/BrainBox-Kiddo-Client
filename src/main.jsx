@@ -11,6 +11,7 @@ import LogIn from './components/pages/LogIn/LogIn.jsx';
 import Register from './components/pages/Register/Register.jsx';
 import AuthProvider from './components/provider/AuthProvider.jsx';
 import AddToys from './components/pages/Add/AddToys.jsx';
+import MyToys from './components/pages/myToys/MyToys.jsx';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,13 @@ const router = createBrowserRouter([
       {
         path : "/add",
         element : <AddToys></AddToys>
+      },
+
+      {
+
+        path : "/myToys",
+        element : <MyToys></MyToys>,
+        loader : () => fetch ('https://brainbox-kiddo-server.vercel.app/allToys')
       }
     ]
   },

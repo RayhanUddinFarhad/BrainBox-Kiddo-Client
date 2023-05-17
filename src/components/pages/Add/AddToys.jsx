@@ -20,10 +20,10 @@ const AddToys = () => {
         e.preventDefault();
 
         const form = e.target
-        const name = form.photo.value;
-        const photo = form.Toyname.value;
+        const name = form.Toyname.value;
+        const photo = form.photo.value;
         const Sellername = form.sellername.value;
-        const selleremail = form.sellername.value;
+        const selleremail = form.selleremail.value;
         const price = form.price.value;
         const rating = form.rating.value;
         const quantity = form.quantity.value;
@@ -79,8 +79,9 @@ const AddToys = () => {
 
 
 
-                            <input type="text" name='photo' placeholder="Picture URL of the toy" className="input w-full" />
                             <input type="text" name='Toyname' placeholder="Toy Name"  className="input w-full" />
+                            <input type="text" name='photo' placeholder="Picture URL of the toy" className="input w-full" />
+
 
                         </div>
 
