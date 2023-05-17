@@ -29,8 +29,15 @@ const Shop = () => {
 
 
     return (
+        <>
+         <div className='border-b-4 border-red-400 mx-96'>
+
+<h1 className='text-center text-3xl font-bold my-5'> Kiddo Shops</h1>
+
+</div>
+
         <div className='flex justify-around'>
-  <Tabs className= 'space-y-10'>
+  <Tabs className= 'space-y-10 my-5'>
     <TabList className= 'flex justify-center space-x-10 tabs tabs-boxed'>
       <Tab  onClick={() => handleTabClick('science')} className= "button-primary">Science Toys</Tab>
       <Tab onClick={() => handleTabClick ('math')} className= "button-primary"> Math Toys</Tab>
@@ -54,6 +61,7 @@ category.map (category => <ShopItems key={category._id} data={category}></ShopIt
 category.map (category => <ShopItems key={category._id} data={category}></ShopItems>)
 }    </TabPanel>
   </Tabs>        </div>
+        </>
     );
 };
 
