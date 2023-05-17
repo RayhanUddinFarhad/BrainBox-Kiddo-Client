@@ -1,12 +1,14 @@
-import { AuthCredential } from 'firebase/auth';
+import { AuthCredential, GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext } from 'react';
 import { Form, Link } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
+import { FcGoogle } from "react-icons/fc";
+
 
 const LogIn = () => {
 
 
-    const {logIn} = useContext(AuthContext)
+    const {logIn, googleLogin} = useContext(AuthContext)
 
 
 
@@ -36,6 +38,33 @@ const LogIn = () => {
 
 
 
+
+
+
+    }
+
+    const handleGoogleLogin = () => { 
+
+        googleLogin ()
+        .then((result) => {
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            const credential = GoogleAuthProvider.credentialFromResult(result);
+            const token = credential.accessToken;
+            // The signed-in user info.
+            const user = result.user;
+            // IdP data available using getAdditionalUserInfo(result)
+            // ...
+          }).catch((error) => {
+            // Handle Errors here.
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // The email of the user's account used.
+            const email = error.customData.email;
+            // The AuthCredential type that was used.
+            const credential = GoogleAuthProvider.credentialFromError(error);
+            // ...
+          });
+        
 
 
 
@@ -73,6 +102,16 @@ const LogIn = () => {
                             </div>
                             <p>New to here? <Link className='btn-link' to = "/register">Register</Link></p>
                         </Form>
+
+                        <button onClick={googleLogin} className='flex items-center text-center mx-auto p-5 border rounded-lg'>
+
+                            <FcGoogle className='mr-2'></FcGoogle>
+                            Continue with google
+
+
+
+
+                        </button>
                     </div>
                 </div>
             </div>
