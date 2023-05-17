@@ -1,6 +1,6 @@
 import { AuthCredential, GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext } from 'react';
-import { Form, Link } from 'react-router-dom';
+import { Form, Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
 import { FcGoogle } from "react-icons/fc";
 
@@ -9,6 +9,10 @@ const LogIn = () => {
 
 
     const {logIn, googleLogin} = useContext(AuthContext)
+    const location = useLocation()
+    const navigate = useNavigate()
+    const from = location.state?.from?.pathname || '/';
+
 
 
 
@@ -27,6 +31,8 @@ const LogIn = () => {
 
 
             const currentUser = res.user;
+            navigate (from, { replace: true })
+
 
 
            
@@ -54,6 +60,8 @@ const LogIn = () => {
             const user = result.user;
             // IdP data available using getAdditionalUserInfo(result)
             // ...
+            navigate (from, { replace: true })
+
           }).catch((error) => {
             // Handle Errors here.
             const errorCode = error.code;

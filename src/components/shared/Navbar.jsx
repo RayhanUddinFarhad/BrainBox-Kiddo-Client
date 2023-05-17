@@ -60,9 +60,16 @@ const Navbar = () => {
     <ul className="menu menu-horizontal px-1 font-bold  space-x-5">
       <Link>Home</Link>
      
-      <Link>All Toys</Link>
+     {
+
+        user && <>
+
+<Link>All Toys</Link>
       <Link>My Toys</Link>
       <Link>Add a Toys</Link>
+        
+        </>
+     }
       <Link>Blogs</Link>
     </ul>
   </div>
