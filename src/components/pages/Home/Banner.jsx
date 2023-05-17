@@ -11,7 +11,7 @@ const Banner = () => {
     <div className='w-full'>
       <h1 className="text-4xl font-bold ">Adventure Awaits: <br /> Exploring Learning  with <br /> Brainbox<span className='text-red-400'>Kiddo</span></h1>
       <p className="py-6">Embark on an educational adventure with BrainboxKiddo,   where learning and fun go hand in hand!  Our captivating collection of educational  toys is designed to spark curiosity,  ignite imaginations, and empower children to explore the wonders of knowledge.  From interactive games and brain-teasing puzzles to hands-on experiments and creative building sets, </p>
-      <button className="bg-red-400 text-white p-3 rounded-lg">Get Started</button>
+      <button className="button-primary">Get Started</button>
     </div>
   </div>
 </div>
