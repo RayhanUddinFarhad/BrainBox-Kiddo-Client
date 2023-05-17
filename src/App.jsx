@@ -14,7 +14,7 @@ function App() {
     <div>
 
       <Navbar></Navbar>
-      <div className='px-5'>
+      <div className=''>
 
       <Outlet></Outlet>
       </div>
