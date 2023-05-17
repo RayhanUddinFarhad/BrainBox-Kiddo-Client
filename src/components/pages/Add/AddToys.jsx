@@ -39,6 +39,20 @@ const AddToys = () => {
         console.log (allFields)
 
 
+        fetch (`https://brainbox-kiddo-server.vercel.app/allToys`, {
+
+        method : 'POST',
+
+        headers : {
+
+            'content-type': 'application/json'
+        },
+
+        body : JSON.stringify(allFields)
+    
+        })
+
+
         
 
         
@@ -79,7 +93,7 @@ const AddToys = () => {
 
 
 
-                            <input type="text" name='sellername' placeholder="URL" className="input w-full" />
+                            <input type="text" name='sellername' placeholder="seller name" className="input w-full" />
                             <input type="text" name='selleremail' placeholder="email" defaultValue={user?.email} disabled className="input w-full" />
 
                         </div>
