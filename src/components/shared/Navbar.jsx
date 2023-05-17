@@ -7,7 +7,22 @@ const Navbar = () => {
 
 
 
-    const {user} = useContext(AuthContext)
+    const {user, logOut} = useContext(AuthContext)
+
+    const handleLogOut = () => { 
+
+        logOut()
+        .then (() => { })
+        .catch (err => {
+
+
+            console.log (err)
+         })
+
+
+
+        
+    }
 
     console.log (user)
     return (
@@ -51,9 +66,15 @@ const Navbar = () => {
       <Link>Blogs</Link>
     </ul>
   </div>
-  <div className="navbar-end">
-    <Link to = "/logIn" className="btn">Log In</Link>
-    <h1>{user?.displayName}</h1>
+  <div className="navbar-end"> {
+
+    user ? <button onClick={handleLogOut} className = "btn btn-warning" >Log Out</button> :     <Link to = "/logIn" className="btn">Log In</Link>
+
+  }
+
+
+
+   <img className='w-14 rounded-full' src= {user?.photoURL} alt="" />
   </div>
 </div>
             
