@@ -16,6 +16,7 @@ import ViewDetails from './components/pages/ViewDetails.jsx';
 import AllToys from './components/pages/AllToys/AllToys.jsx';
 import Update from './components/pages/myToys/Update.jsx';
 import PrivateRoutes from './components/Routes/PrivateRoutes.jsx'
+import ErrorPage from './components/pages/ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -75,6 +76,12 @@ const router = createBrowserRouter([
       }
     ]
   },
+
+  {
+
+    path : '*',
+    element : <ErrorPage></ErrorPage>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
