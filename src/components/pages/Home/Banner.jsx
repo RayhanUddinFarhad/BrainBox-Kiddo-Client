@@ -27,7 +27,7 @@ const Banner = () => {
 
         <div className='space-y-5'>
 
-         <div className='flex justify-evenly bg-green-200 rounded-lg h-40 items-center p-3'>
+         <div className='flex justify-evenly bg-green-200 text-green-700 rounded-lg h-40 items-center p-3'>
           <img className='h-full' src= {mathkid} alt="" />
           <h1 className='text-2xl font-extrabold text-'>Scientist Toys</h1>
 
@@ -39,7 +39,7 @@ const Banner = () => {
 
 
          </div>
-         <div className='flex justify-evenly bg-pink-300 rounded-lg h-40 items-center p-3'>
+         <div className='flex justify-evenly bg-pink-200 text-pink-500 rounded-lg h-40 items-center p-3'>
           <img className='h-full' src= {mathkid1} alt="" />
           <h1 className='text-2xl font-bold'> Math Toys</h1>
 
@@ -51,7 +51,7 @@ const Banner = () => {
 
 
          </div>
-         <div className='flex justify-evenly bg-red-300 rounded-lg h-40 items-center p-3'>
+         <div className='flex justify-evenly bg-red-200 text-red-700 rounded-lg h-40 items-center p-3'>
           <img className='h-full' src= {engineerKid} alt="" />
           <h1 className='text-2xl font-bold'>Engineering Toys</h1>
 

@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 import { Form, Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
 import { FcGoogle } from "react-icons/fc";
+import kid from '../../../assets/images/kidLogIn.png'
 
 
 const LogIn = () => {
@@ -82,11 +83,11 @@ const LogIn = () => {
 
     return (
         <div>
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen ">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold">Login now!</h1>
-                        <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                       <img className='w-96' src= {kid} alt="" />
+                       <h1 className='text-3xl font-extrabold'>Log In Now to enjoy all Features of Brain<span className='text-red-400'>Kiddo</span></h1>
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <Form onSubmit={handleLogIn} className="card-body">
@@ -111,7 +112,7 @@ const LogIn = () => {
                             <p>New to here? <Link className='btn-link' to = "/register">Register</Link></p>
                         </Form>
 
-                        <button onClick={googleLogin} className='flex items-center text-center mx-auto p-5 border rounded-lg'>
+                        <button onClick={googleLogin} className='flex items-center text-center mx-auto p-5 border rounded-lg my-2'>
 
                             <FcGoogle className='mr-2'></FcGoogle>
                             Continue with google
