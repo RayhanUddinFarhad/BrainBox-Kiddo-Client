@@ -15,6 +15,7 @@ import MyToys from './components/pages/myToys/MyToys.jsx';
 import ViewDetails from './components/pages/ViewDetails.jsx';
 import AllToys from './components/pages/AllToys/AllToys.jsx';
 import Update from './components/pages/myToys/Update.jsx';
+import PrivateRoutes from './components/Routes/PrivateRoutes.jsx'
 
 const router = createBrowserRouter([
   {
@@ -47,7 +48,7 @@ const router = createBrowserRouter([
       {
 
         path : "/myToys",
-        element : <MyToys></MyToys>,
+        element : <PrivateRoutes><MyToys></MyToys></PrivateRoutes>,
         loader : () => fetch ('https://brainbox-kiddo-server.vercel.app/allToys')
       },
 
@@ -55,7 +56,7 @@ const router = createBrowserRouter([
       {
 
         path : "/viewDetails/:id",
-        element : <ViewDetails></ViewDetails>,
+        element : <PrivateRoutes><ViewDetails></ViewDetails></PrivateRoutes>,
         loader : ({params}) => fetch (`http://localhost:3000/getone/${params.id}`)
       },
 

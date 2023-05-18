@@ -112,7 +112,7 @@ const LogIn = () => {
                             <p>New to here? <Link className='btn-link' to = "/register">Register</Link></p>
                         </Form>
 
-                        <button onClick={googleLogin} className='flex items-center text-center mx-auto p-5 border rounded-lg my-2'>
+                        <button onClick={handleGoogleLogin} className='flex items-center text-center mx-auto p-5 border rounded-lg my-2'>
 
                             <FcGoogle className='mr-2'></FcGoogle>
                             Continue with google

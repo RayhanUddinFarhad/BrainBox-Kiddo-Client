@@ -47,7 +47,7 @@ const Shop = () => {
     <TabList className= 'flex justify-center space-x-10 tabs tabs-boxed'>
       <Tab defaultChecked  onClick={() => handleTabClick('science')} >Science Toys</Tab>
       <Tab onClick={() => handleTabClick ('math')} > Math Toys</Tab>
-      <Tab onClick={() => handleTabClick ('engineering')} > Engineering Toys</Tab>
+      <Tab onClick={() => handleTabClick ('engineer')} > Engineering Toys</Tab>
     </TabList>
 
     <TabPanel className= "grid lg:grid-cols-3 gap-5">

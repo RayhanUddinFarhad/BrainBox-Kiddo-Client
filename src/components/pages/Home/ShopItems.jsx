@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 const ShopItems = ({data}) => {
     return (
         <div>
-            <div className="  h-full shadow p-10 rounded-xl">
+            <div className=" card h-full shadow p-10 rounded-xl">
   <figure><img className='w-52' src= {data.photo}  /></figure>
-  <div className="text-center space-y-5">
+  <div className="text-center space-y-5 card-body">
     <h2 className="font-bold text-2xl"> {data.name}</h2>
     <h2 className="font-bold text-xl text-red-400"> {data.price}</h2>
     <h2 className='flex items-center justify-center font-bold'> <FaStar className='text-yellow-500'></FaStar>

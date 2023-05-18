@@ -113,7 +113,7 @@ const AddToys = () => {
 
 
 
-                            <input type="text" defaultValue={user.displayName} name='sellername' placeholder="seller name" className="input w-full" />
+                            <input type="text" defaultValue={user?.displayName} name='sellername' placeholder="seller name" className="input w-full" />
                             <input type="text" name='selleremail' placeholder="email" defaultValue={user?.email} disabled className="input w-full" />
 
                         </div>
@@ -128,8 +128,8 @@ const AddToys = () => {
 
 
                             <select value={selectedSubCategory} onChange={handleSubCategoryChange} className="select select-bordered w-full  ">
-                                <option disabled selected>Sub Category</option>
-                                <option value="science">Science Toys</option>
+                                <option  selected>Sub Category</option>
+                                <option selected value="science">Science Toys</option>
                                 <option value="math">Math Toys</option>
                                 <option value="engineer">Engineer Toys</option>
                             </select>
