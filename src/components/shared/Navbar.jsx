@@ -70,7 +70,7 @@ const Navbar = () => {
 
                             </>
                         }
-                        <Link>Blogs</Link>
+                        <Link to = "/blogs">Blogs</Link>
                     </ul>
                 </div>
                 <div className="navbar-end"> {

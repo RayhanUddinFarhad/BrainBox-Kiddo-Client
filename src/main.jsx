@@ -17,6 +17,7 @@ import AllToys from './components/pages/AllToys/AllToys.jsx';
 import Update from './components/pages/myToys/Update.jsx';
 import PrivateRoutes from './components/Routes/PrivateRoutes.jsx'
 import ErrorPage from './components/pages/ErrorPage.jsx';
+import Blogs from './components/pages/Blogs.jsx';
 
 const router = createBrowserRouter([
   {
@@ -73,6 +74,12 @@ const router = createBrowserRouter([
         element : <Update></Update>,
         loader : ({params}) => fetch (`http://localhost:3000/getone/${params.id}`)
 
+      },
+
+      {
+
+        path : "/blogs",
+        element :  <Blogs></Blogs>
       }
     ]
   },
