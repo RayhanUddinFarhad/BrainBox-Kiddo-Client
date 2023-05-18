@@ -61,11 +61,14 @@ const [data, setData] = useState([])
             {/* head*/}
             <thead>
               <tr>
+                <th>Photo</th>
                 <th>Seller Name</th>
+                <th>Seller Email</th>
                 <th>Toy Name</th>
                 <th>Sub-category</th>
                 <th>Price</th>
                 <th>Available Quantity</th>
+                <th>Rating</th>
                 <th>View Details</th>
               </tr>
             </thead>

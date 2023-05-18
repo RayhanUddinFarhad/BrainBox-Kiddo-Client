@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Form, useLoaderData } from 'react-router-dom';
 import Toy from './Toy';
 import { AuthContext } from '../../provider/AuthProvider';
+import MyToy from './MyToy';
 
 const MyToys = () => {
 
@@ -17,7 +18,7 @@ const MyToys = () => {
       .then (res => res.json())
       .then (data =>setData (data))
 
-    }, [])
+    }, [data])
 
 
     
@@ -30,31 +31,36 @@ const MyToys = () => {
         <div>
 
 
-<div className="overflow-x-auto">
+<div className="overflow-x-auto w-full">
   <table className="table w-full">
-    {/* head*/}
+    {/* head */}
     <thead>
       <tr>
-        <th>Seller Name</th>
+        <th>
+          Picture
+        </th>
         <th>Toy Name</th>
-        <th>Sub-category</th>
+        <th>Seller Name</th>
+        <th>Seller Email</th>
         <th>Price</th>
-        <th>Available Quantity</th>
-        <th>View Details</th>
+        <th>Rating</th>
+        <th>Quantity</th>
+        <th>Category</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
       {/* row 1 */}
 
       {
-
-        data && data.map (data => <Toy data = {data}></Toy>)
+        data && data.map (data => <MyToy  key={data._id} data = {data}></MyToy>)
       }
       
-     
-    </tbody>
+      {/* row 2 */}
+      
+</tbody>    
   </table>
-</div>        </div>
+</div> </div>
     );
 };
 
