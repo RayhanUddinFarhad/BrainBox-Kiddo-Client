@@ -13,7 +13,8 @@ const Shop = () => {
 
         fetch (`https://brainbox-kiddo-server.vercel.app/toys/${category}`)
         .then (res => res.json())
-        .then (data => setCategory (data))
+        .then (data => {setCategory (data)
+        })
 
 
 
@@ -30,9 +31,9 @@ const Shop = () => {
 
     return (
         <>
-         <div className='border-b-4 border-red-400 mx-96'>
+         <div className='border-b-2 border-red-400 px-10 mr-52'>
 
-<h1 className='text-center text-3xl font-bold my-5'> Kiddo Shops</h1>
+<h1 className='text-left text-3xl font-bold my-5'> <span className='text-red-400'>Kiddo</span> Shops</h1>
 
 </div>
 

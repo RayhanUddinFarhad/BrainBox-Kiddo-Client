@@ -11,10 +11,10 @@ const Banner = () => {
     <div>
       <div className='grid lg:grid-cols-3 gap-5'>
 
-        <div className='flex col-span-2  items-center bg-pink-200'>
+        <div className='lg:flex col-span-2  items-center bg-pink-200'>
 
 
-          <img className='w-1/2 ' src={banne2} alt="" />
+          <img className='lg:w-1/2  ' src={banne2} alt="" />
           <div className='p-2'>
 
           <h1 className='font-bold text-4xl mb-5'>  Discover Educational Toys: <span className='text-red-500'>Learning Made Fun!</span></h1>
@@ -53,7 +53,7 @@ const Banner = () => {
          </div>
          <div className='flex justify-evenly bg-red-300 rounded-lg h-40 items-center p-3'>
           <img className='h-full' src= {engineerKid} alt="" />
-          <h1 className='text-2xl font-bold'>Engineer Toys</h1>
+          <h1 className='text-2xl font-bold'>Engineering Toys</h1>
 
 
 
