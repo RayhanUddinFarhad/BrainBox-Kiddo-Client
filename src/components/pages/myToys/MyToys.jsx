@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Form, useLoaderData } from 'react-router-dom';
 import Toy from './Toy';
+import { AuthContext } from '../../provider/AuthProvider';
 
 const MyToys = () => {
 
     const data = useLoaderData ()
+    const {user} = useContext(AuthContext)
 
 
     const handleSearches = (e) => {
@@ -13,7 +15,7 @@ const MyToys = () => {
         const text = e.target.text.value;
         console.log(text);
 
-        fetch (`http://localhost:3000/allToys/${text}`)
+        fetch (`http://localhost:3000/allToys?email=${user?.email}`)
         .then (res => res.json())
         .then (data => console.log (data))
 

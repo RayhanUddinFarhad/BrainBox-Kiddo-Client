@@ -64,7 +64,7 @@ const Navbar = () => {
 
                             user && <>
 
-                                <Link>All Toys</Link>
+                                <Link to = "/allToys">All Toys</Link>
                                 <Link to = "/myToys">My Toys</Link>
                                 <Link to = "/add">Add a Toys</Link>
 
