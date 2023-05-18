@@ -1,6 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { Form } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
+import { data } from 'autoprefixer';
+import Swal from 'sweetalert2';
 
 const AddToys = () => {
 
@@ -39,7 +41,7 @@ const AddToys = () => {
         console.log (allFields)
 
 
-        fetch (`https://brainbox-kiddo-server.vercel.app/allToys`, {
+        fetch (`http://localhost:3000/allToys`, {
 
         method : 'POST',
 
@@ -50,6 +52,23 @@ const AddToys = () => {
 
         body : JSON.stringify(allFields)
     
+        })
+        .then (res => res.json())
+        .then (data => {console.log(data)
+
+            if (data.insertedId) {
+
+                Swal.fire(
+                    'Good job!',
+                    'Data added successFull!',
+                    'success'
+                  )
+            }
+
+            e.target.reset()
+        
+        
+        
         })
 
 
@@ -94,7 +113,7 @@ const AddToys = () => {
 
 
 
-                            <input type="text" name='sellername' placeholder="seller name" className="input w-full" />
+                            <input type="text" defaultValue={user.displayName} name='sellername' placeholder="seller name" className="input w-full" />
                             <input type="text" name='selleremail' placeholder="email" defaultValue={user?.email} disabled className="input w-full" />
 
                         </div>

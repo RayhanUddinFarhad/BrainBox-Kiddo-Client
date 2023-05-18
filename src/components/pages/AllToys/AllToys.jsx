@@ -16,7 +16,7 @@ const [data, setData] = useState([])
     useEffect (() => { 
 
 
-        fetch (`https://brainbox-kiddo-server.vercel.app/allToys`)
+        fetch (`http://localhost:3000/allToys`)
         .then (res => res.json())
         .then (data => setData (data))
 
@@ -32,7 +32,7 @@ const [data, setData] = useState([])
         const text = e.target.text.value;
         console.log(text);
 
-        fetch (`https://brainbox-kiddo-server.vercel.app/ToysbySeach/${text}`)
+        fetch (`http://localhost:3000/ToysbySeach/${text}`)
         .then (res => res.json())
         .then (data => setData (data))
 

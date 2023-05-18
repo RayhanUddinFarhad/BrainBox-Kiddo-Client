@@ -26,7 +26,7 @@ const Update = () => {
         console.log(all)
 
 
-        fetch (`https://brainbox-kiddo-server.vercel.app/allToys/${data._id}`, {
+        fetch (`http://localhost:3000/${data._id}`, {
 
         method : 'PUT',
 

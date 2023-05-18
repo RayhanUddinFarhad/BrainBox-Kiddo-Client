@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const MyToy = ({ data, states }) => {
 
@@ -8,7 +9,7 @@ const MyToy = ({ data, states }) => {
 
 
 
-    fetch(`https://brainbox-kiddo-server.vercel.app/${data._id}`, {
+    fetch(`http://localhost:3000/deleteToy/${data._id}`, {
 
       method: 'DELETE',
     })
@@ -16,7 +17,15 @@ const MyToy = ({ data, states }) => {
       .then(data => {
         console.log(data)
 
-        states(data)
+       if (data.deletedCount > 0) { 
+
+
+        Swal.fire(
+          'Good job!',
+          'Data deleted successFull!',
+          'success'
+        )
+       }
 
 
 
@@ -40,7 +49,7 @@ const MyToy = ({ data, states }) => {
         {data.name}
       </td>
       <td>{data.Sellername}</td>
-      <td>{data.selleremail}</td>
+      <td>{data?.selleremail}</td>
       <td>{data.price}</td>
       <td>{data.rating}</td>
       <td>{data.quantity}</td>
