@@ -14,7 +14,7 @@ const MyToys = () => {
     useEffect (() => { 
 
 
-      fetch (`http://localhost:3000/Toysbyemail/${user?.email}`)
+      fetch (`https://brainbox-kiddo-server.vercel.app/allToys/${user?.email}`)
       .then (res => res.json())
       .then (data =>setData (data))
 
