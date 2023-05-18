@@ -2,35 +2,42 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
-const MyToy = ({ data, states }) => {
-
-  const handleDelete = () => {
+const MyToy = ({ data, setData }) => {
 
 
 
+  const handleDelete = (id) => {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:3000/deleteToy/${data._id}`, {
+          method: 'DELETE',
+        })
+          .then((res) => res.json())
+          .then((deletedData) => {
+            console.log(deletedData);
+            // Update the state to remove the deleted item
+            setData((prevData) => prevData.filter((item) => item._id !== id));
+          })
+          .catch((error) => {
+            console.log(error);
+          });
 
-    fetch(`http://localhost:3000/deleteToy/${data._id}`, {
+        Swal.fire('Deleted!', 'Your file has been deleted.', 'success');
+      }
+    });
 
-      method: 'DELETE',
-    })
-      .then(res => res.json())
-      .then(data => {
-        console.log(data)
-
-       if (data.deletedCount > 0) { 
+    console.log(id);
+  };
 
 
-        Swal.fire(
-          'Good job!',
-          'Data deleted successFull!',
-          'success'
-        )
-       }
-
-
-
-      })
-  }
   return (
 
     <tr>
@@ -57,7 +64,7 @@ const MyToy = ({ data, states }) => {
       <th>
         <Link to={`/update/${data._id}`}>            <button className='button-primary'>Update</button>
         </Link>
-        <button onClick={handleDelete} className='btn'>Delete</button>
+        <button onClick={() => handleDelete(data._id)} className='btn'>Delete</button>
       </th>
     </tr>
 

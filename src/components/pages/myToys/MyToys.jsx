@@ -3,6 +3,7 @@ import { Form, useLoaderData } from 'react-router-dom';
 import Toy from './Toy';
 import { AuthContext } from '../../provider/AuthProvider';
 import MyToy from './MyToy';
+import Swal from 'sweetalert2';
 
 const MyToys = () => {
 
@@ -18,8 +19,11 @@ const MyToys = () => {
       .then (res => res.json())
       .then (data =>setData (data))
 
-    }, [])
+    }, [data])
 
+
+
+    
 
     
 
@@ -53,7 +57,7 @@ const MyToys = () => {
       {/* row 1 */}
 
       {
-        data && data.map (data => <MyToy  key={data._id} data = {data}></MyToy>)
+        data && data.map (data => <MyToy   key={data._id} data = {data} setData = {setData} ></MyToy>)
       }
       
       {/* row 2 */}
