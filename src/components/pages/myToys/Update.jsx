@@ -1,5 +1,6 @@
 import React from 'react';
 import { Form, useLoaderData } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const Update = () => {
 
@@ -38,7 +39,21 @@ const Update = () => {
 
         })
         .then (res => res.json())
-        .then (data => console.log(data))
+        .then (data => {console.log(data)
+
+            if (data.modifiedCount > 0) {
+
+                Swal.fire(
+                    'Good job!',
+                    'Data Updated successFull!',
+                    'success'
+                  )
+
+
+            }
+        
+        
+        })
 
      }
 
