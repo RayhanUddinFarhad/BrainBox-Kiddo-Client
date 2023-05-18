@@ -1,12 +1,29 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../provider/AuthProvider';
-import { useLoaderData } from 'react-router-dom';
+import { Form, useLoaderData } from 'react-router-dom';
+import Toy from '../myToys/Toy';
 
 const AllToys = () => {
 
 
-    const data = useLoaderData ()
-    const {user} = useContext(AuthContext)
+const [data, setData] = useState([])
+   const {user} = useContext(AuthContext)
+
+
+
+
+
+    useEffect (() => { 
+
+
+        fetch (`http://localhost:3000/allToys`)
+        .then (res => res.json())
+        .then (data => setData (data))
+
+
+
+
+    }, [])
 
 
     const handleSearches = (e) => {
