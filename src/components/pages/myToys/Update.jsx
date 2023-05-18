@@ -26,7 +26,7 @@ const Update = () => {
         console.log(all)
 
 
-        fetch (`http://localhost:3000/${data._id}`, {
+        fetch (`http://localhost:3000/getone/${data._id}`, {
 
         method : 'PUT',
 

@@ -32,7 +32,7 @@ const [data, setData] = useState([])
         const text = e.target.text.value;
         console.log(text);
 
-        fetch (`http://localhost:3000/ToysbySeach/${text}`)
+        fetch (`http://localhost:3000/search/${text}`)
         .then (res => res.json())
         .then (data => setData (data))
 
