@@ -5,6 +5,7 @@ import './App.css'
 import Home from './components/pages/Home/Home'
 import Navbar from './components/shared/Navbar'
 import { Outlet } from 'react-router-dom'
+import Footer from './components/shared/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,7 +18,12 @@ function App() {
       <div className=''>
 
       <Outlet></Outlet>
+
       </div>
+
+      <Footer></Footer>
+
+      
 
      
 
