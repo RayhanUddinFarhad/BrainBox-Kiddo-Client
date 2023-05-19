@@ -47,6 +47,17 @@ const Navbar = () => {
                                 </ul>
                             </li>
                             <li><a>Item 3</a></li>
+
+                            <div className="navbar-end"> {
+
+                                user ? <button onClick={handleLogOut} className="bg-[#fdeaee] p-2  font-bold text-red-500 rounded-lg mr-2" >Log Out</button> : <Link to="/logIn" className="button-primary">Log In</Link>
+
+                            }
+
+
+
+                                <img className='w-14 rounded-full' src={user?.photoURL} alt="" />
+                            </div>
                         </ul>
                     </div>
                     <div className='flex items-center'>
@@ -64,16 +75,16 @@ const Navbar = () => {
 
                             user && <>
 
-                                <Link to = "/allToys">All Toys</Link>
-                                <Link to = "/myToys">My Toys</Link>
-                                <Link to = "/add">Add a Toys</Link>
+                                <Link to="/allToys">All Toys</Link>
+                                <Link to="/myToys">My Toys</Link>
+                                <Link to="/add">Add a Toys</Link>
 
                             </>
                         }
-                        <Link to = "/blogs">Blogs</Link>
+                        <Link to="/blogs">Blogs</Link>
                     </ul>
                 </div>
-                <div className="navbar-end"> {
+                <div className="navbar-end hidden lg:flex"> {
 
                     user ? <button onClick={handleLogOut} className="bg-[#fdeaee] p-2  font-bold text-red-500 rounded-lg mr-2" >Log Out</button> : <Link to="/logIn" className="button-primary">Log In</Link>
 

@@ -6,10 +6,10 @@ import { FaDonate, FaHeadphones, FaMoneyBill, FaTruck } from 'react-icons/fa';
 
 const WhychooseUs = () => {
     return (
-        <div  className='grid lg:grid-cols-2 bg-sky-100'>
+        <div  className='grid lg:grid-cols-2 bg-sky-50 p-5'>
 
 
-            <div data-aos="fade-right" data-aos-duration="2000"  className='bg-sky-100'>
+            <div data-aos="fade-right" data-aos-duration="2000"  >
                 <img src= {kids} alt="" />
 
 

@@ -24,7 +24,7 @@ function App() {
     <div>
 
       <Navbar></Navbar>
-      <div className='border '>
+      <div className=' overflow-x-hidden'>
 
       <Outlet></Outlet>
 
