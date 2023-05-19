@@ -1,5 +1,5 @@
 import { AuthCredential, GoogleAuthProvider } from 'firebase/auth';
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Form, Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
 import { FcGoogle } from "react-icons/fc";
@@ -14,6 +14,7 @@ const LogIn = () => {
     const location = useLocation()
     const navigate = useNavigate()
     const from = location.state?.from?.pathname || '/';
+    const [error, setError] = useState('')
 
     useTitle  ('Login')
 
@@ -43,7 +44,14 @@ const LogIn = () => {
 
             console.log (currentUser)
         })
-        .catch (err => console.log (err))
+        .catch (err => {console.log (err)
+
+
+            setError (`error  : ${err.message}`)
+        
+        
+        
+        })
 
 
 
@@ -74,6 +82,9 @@ const LogIn = () => {
             const email = error.customData.email;
             // The AuthCredential type that was used.
             const credential = GoogleAuthProvider.credentialFromError(error);
+
+
+            setError (error.message)
             // ...
           });
         
@@ -94,17 +105,18 @@ const LogIn = () => {
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <Form onSubmit={handleLogIn} className="card-body">
+                            <p className='text-red-600'>{error}</p>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input name='email' type="text" placeholder="email" className="input input-bordered" />
+                                <input required name='email' type="text" placeholder="email" className="input input-bordered" />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input name='password' type="text" placeholder="password" className="input input-bordered" />
+                                <input required name='password' type="text" placeholder="password" className="input input-bordered" />
                                 <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>
