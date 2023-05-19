@@ -64,7 +64,7 @@ const MyToy = ({ data, setData }) => {
       <th>
         <Link to={`/update/${data._id}`}>            <button className='button-primary'>Update</button>
         </Link>
-        <button onClick={() => handleDelete(data._id)} className='btn'>Delete</button>
+        <button onClick={() => handleDelete(data._id)} className='button-secondary'>Delete</button>
       </th>
     </tr>
 
