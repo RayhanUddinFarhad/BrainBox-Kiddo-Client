@@ -15,7 +15,7 @@ const MyToys = () => {
     useEffect (() => { 
 
 
-      fetch (`http://localhost:3000/allToys/${user?.email}`)
+      fetch (`https://brainbox-kiddo-server.vercel.app/allToys/${user?.email}`)
       .then (res => res.json())
       .then (data =>setData (data))
 
@@ -27,14 +27,14 @@ const MyToys = () => {
     const handleLowestPrice = () => {
 
 
-      fetch (`http://localhost:3000/lowest/${user?.email}`)
+      fetch (`https://brainbox-kiddo-server.vercel.app/lowest/${user?.email}`)
       .then (res => res.json())
       .then (data => setData (data))
     }
     const handleHighestPrice = () => {
 
 
-      fetch (`http://localhost:3000/highest/${user?.email}`)
+      fetch (`https://brainbox-kiddo-server.vercel.app/highest/${user?.email}`)
       .then (res => res.json())
       .then (data => setData (data))
     }

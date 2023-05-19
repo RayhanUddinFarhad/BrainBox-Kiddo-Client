@@ -20,9 +20,7 @@ const ShopItems = ({data}) => {
     </div>
   </div>
   <div className="px-6 py-4">
-    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-      View Details
-    </button>
+    <Link to = {`/viewDetails/${data._id}`} className='button-primary'>View Details</Link>
   </div>
 </div>
 

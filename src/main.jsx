@@ -59,7 +59,7 @@ const router = createBrowserRouter([
 
         path : "/viewDetails/:id",
         element : <PrivateRoutes><ViewDetails></ViewDetails></PrivateRoutes>,
-        loader : ({params}) => fetch (`http://localhost:3000/getone/${params.id}`)
+        loader : ({params}) => fetch (`https://brainbox-kiddo-server.vercel.app/getone/${params.id}`)
       },
 
       {
@@ -72,7 +72,7 @@ const router = createBrowserRouter([
 
         path : "/update/:id",
         element : <Update></Update>,
-        loader : ({params}) => fetch (`http://localhost:3000/getone/${params.id}`)
+        loader : ({params}) => fetch (`https://brainbox-kiddo-server.vercel.app/getone/${params.id}`)
 
       },
 

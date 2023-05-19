@@ -41,7 +41,7 @@ const AddToys = () => {
         console.log (allFields)
 
 
-        fetch (`http://localhost:3000/allToys`, {
+        fetch (`https://brainbox-kiddo-server.vercel.app/allToys`, {
 
         method : 'POST',
 

@@ -19,7 +19,7 @@ const [data, setData] = useState([])
       setLoading (true)
 
 
-        fetch (`http://localhost:3000/allToys`)
+        fetch (`https://brainbox-kiddo-server.vercel.app/allToys`)
         .then (res => res.json())
         .then (data => {setData (data)
         
@@ -39,7 +39,7 @@ const [data, setData] = useState([])
 
         setLoading (true)
 
-        fetch (`http://localhost:3000/search/${text}`)
+        fetch (`https://brainbox-kiddo-server.vercel.app/search/${text}`)
         .then (res => res.json())
         .then (data => {setData (data)
         

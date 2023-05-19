@@ -27,12 +27,12 @@ const Update = () => {
         console.log(all)
 
 
-        fetch (`http://localhost:3000/getone/${data._id}`, {
+        fetch (`https://brainbox-kiddo-server.vercel.app/getone/${data._id}`, {
 
-        method : 'PUT',
+        method : 'PATCH',
 
         headers : {
-            'content-type': 'application/json'
+            'Content-type': 'application/json'
         },
 
         body : JSON.stringify(all)

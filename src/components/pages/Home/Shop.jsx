@@ -11,7 +11,7 @@ const Shop = () => {
     const handleTabClick = (category) => { 
 
 
-        fetch (`http://localhost:3000/toys/${category}`)
+        fetch (`https://brainbox-kiddo-server.vercel.app/toys/${category}`)
         .then (res => res.json())
         .then (data => {setCategory (data)
         })

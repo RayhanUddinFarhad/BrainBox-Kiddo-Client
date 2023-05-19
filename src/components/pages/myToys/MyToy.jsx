@@ -17,7 +17,7 @@ const MyToy = ({ data, setData }) => {
       confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/deleteToy/${data._id}`, {
+        fetch(`https://brainbox-kiddo-server.vercel.app/deleteToy/${data._id}`, {
           method: 'DELETE',
         })
           .then((res) => res.json())
