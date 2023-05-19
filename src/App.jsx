@@ -16,7 +16,7 @@ function App() {
     <div>
 
       <Navbar></Navbar>
-      <div className=''>
+      <div className='border '>
 
       <Outlet></Outlet>
 

@@ -7,46 +7,48 @@ import 'react-toastify/dist/ReactToastify.css';
 import { LottiePlayer } from 'lottie-react';
 import Loader from '../shared/Loader';
 
-const PrivateRoutes = ({children, loader}) => {
+const PrivateRoutes = ({ children }) => {
 
-    const location = useLocation ()
-    const {user} = useContext(AuthContext)
-
-
-if (!user) {
-
-toast("You have to log in first to view details")
+    const location = useLocation()
+    const { user, loader } = useContext(AuthContext)
 
 
-}
-
-if (loader) {
+    if (loader) {
 
 
-  return <Loader></Loader>
-}
+        return <Loader></Loader>
+     }
+
+    if (!user) {
+
+        toast("You have to log in first to view details")
+
+
+    }
+
+    
 
     if (user) {
 
         return children;
-     }
-
-     
-
-        
+    }
 
 
 
-        
-        
-        <Navigate state={{from : location}} to = '/login' replace></Navigate>
 
 
-        
-       
 
 
-   
+
+
+    return <Navigate state={{ from: location }} to='/login' replace></Navigate>
+
+
+
+
+
+
+
 };
 
 export default PrivateRoutes;

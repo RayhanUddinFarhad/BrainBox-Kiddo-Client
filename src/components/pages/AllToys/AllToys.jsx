@@ -2,23 +2,28 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../provider/AuthProvider';
 import { Form, useLoaderData } from 'react-router-dom';
 import Toy from '../myToys/Toy';
+import Loader from '../../shared/Loader';
 
 const AllToys = () => {
 
 
 const [data, setData] = useState([])
    const {user} = useContext(AuthContext)
+   const [loading, setLoading] = useState(false)
 
 
 
 
 
     useEffect (() => { 
+      setLoading (true)
 
 
         fetch (`http://localhost:3000/allToys`)
         .then (res => res.json())
-        .then (data => setData (data))
+        .then (data => {setData (data)
+        
+        setLoading (false)})
 
 
 
@@ -32,9 +37,14 @@ const [data, setData] = useState([])
         const text = e.target.text.value;
         console.log(text);
 
+        setLoading (true)
+
         fetch (`http://localhost:3000/search/${text}`)
         .then (res => res.json())
-        .then (data => setData (data))
+        .then (data => {setData (data)
+        
+        
+        setLoading (false)})
 
 
     }
@@ -80,7 +90,15 @@ const [data, setData] = useState([])
              
             </tbody>
           </table>
-        </div>        </div>
+        </div>      
+
+        {
+
+          loading && <Loader></Loader>
+        }
+        
+        
+          </div>
     );
 };
 

@@ -13,10 +13,9 @@ const Testimonal = () => {
 
             {" "}
             <br />
-            <Swiper watchSlidesProgress={true} slidesPerView={3} className="mySwiper">
-                <SwiperSlide>
+            <div watchSlidesProgress={true} slidesPerView={3} className="mySwiper grid lg:grid-cols-3 ">
 
-                    <div className='card text-center space-y-5'>
+                    <div className='card text-center space-y-5 w-full'>
 
                         <img className='w-20 mx-auto rounded-full' src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="" />
                         <p className='flex justify-center items-center font-bold '> 5 <FaStar className='text-yellow-500'></FaStar>
@@ -37,8 +36,6 @@ const Testimonal = () => {
 
 
 
-                </SwiperSlide>
-                <SwiperSlide>
 
                     <div className='card text-center space-y-5 h-full'>
 
@@ -61,7 +58,6 @@ const Testimonal = () => {
 
 
 
-                </SwiperSlide>         <SwiperSlide>
 
                     <div className='card text-center space-y-5'>
 
@@ -84,9 +80,8 @@ const Testimonal = () => {
 
 
 
-                </SwiperSlide>
 
-            </Swiper>
+            </div>
 
         </div>
     );

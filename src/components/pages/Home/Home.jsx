@@ -7,7 +7,7 @@ import Testimonal from './Testimonal';
 
 const Home = () => {
     return (
-        <div className='space-y-10'>
+        <div className='space-y-10 max-w-max'>
            <Banner></Banner>
            <Gallery></Gallery>
            <Shop></Shop>
