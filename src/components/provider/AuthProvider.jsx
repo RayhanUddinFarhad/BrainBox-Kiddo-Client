@@ -11,10 +11,14 @@ const AuthProvider = ({children}) => {
 
     const [user, setUser] = useState (null)
 
+    const [loader, setLoader] = useState (false)
+
 
 
 
     const register = (email, password) => {
+
+        setLoader (true)
 
 
       return  createUserWithEmailAndPassword (auth,  email,  password)
@@ -22,18 +26,21 @@ const AuthProvider = ({children}) => {
 
 
     const logIn = (email, password) => { 
+        setLoader (true)
 
 
         return signInWithEmailAndPassword (auth, email, password)
     }
 
     const logOut = () => {
+        setLoader (true)
 
 
         return signOut (auth)
     }
 
     const googleLogin = () => { 
+        setLoader (true)
 
         return signInWithPopup (auth, provider)
 
@@ -49,6 +56,7 @@ const AuthProvider = ({children}) => {
 
 
             setUser (currentUser)
+            setLoader (false)
         })
 
         return () => unsubscribe()
@@ -64,7 +72,8 @@ const AuthProvider = ({children}) => {
         register, 
         logIn,
         logOut,
-        googleLogin
+        googleLogin,
+        loader
     }
 
 

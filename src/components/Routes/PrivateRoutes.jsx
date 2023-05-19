@@ -4,8 +4,10 @@ import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../provider/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { LottiePlayer } from 'lottie-react';
+import Loader from '../shared/Loader';
 
-const PrivateRoutes = ({children}) => {
+const PrivateRoutes = ({children, loader}) => {
 
     const location = useLocation ()
     const {user} = useContext(AuthContext)
@@ -18,14 +20,18 @@ toast("You have to log in first to view details")
 
 }
 
+if (loader) {
+
+
+  return <Loader></Loader>
+}
+
     if (user) {
 
         return children;
      }
 
-     else {
-
-        return <>
+     
 
         
 
@@ -37,10 +43,7 @@ toast("You have to log in first to view details")
 
 
         
-        
-        </>
-     }
-
+       
 
 
    
