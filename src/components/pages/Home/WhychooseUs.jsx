@@ -3,19 +3,20 @@ import kids from '../../../assets/images/somekids.png'
 import sun from '../../../assets/images/sunBackGround.png'
 import { FaDonate, FaHeadphones, FaMoneyBill, FaTruck } from 'react-icons/fa';
 
+
 const WhychooseUs = () => {
     return (
-        <div className='grid lg:grid-cols-2 bg-sky-100'>
+        <div  className='grid lg:grid-cols-2 bg-sky-100'>
 
 
-            <div  className='bg-sky-100'>
+            <div data-aos="fade-right" data-aos-duration="2000"  className='bg-sky-100'>
                 <img src= {kids} alt="" />
 
 
 
             </div>
 
-            <div className='space-y-5'>
+            <div data-aos="fade-left" data-aos-duration="2000" className='space-y-5'>
 
                 <h1 className='text-3xl font-bold'>Why You choose us?</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus architecto veniam et nemo accusamus!</p>

@@ -14,8 +14,8 @@ const Banner = () => {
         <div className='lg:flex col-span-2  items-center bg-pink-200'>
 
 
-          <img className='lg:w-1/2  ' src={banne2} alt="" />
-          <div className='p-2'>
+          <img data-aos="fade-right" data-aos-duration="2000" className='lg:w-1/2  ' src={banne2} alt="" />
+          <div data-aos="fade-left" data-aos-duration="2000"  className='p-2'>
 
           <h1 className='font-bold text-4xl mb-5'>  Discover Educational Toys: <span className='text-red-500'>Learning Made Fun!</span></h1>
           <p>Unlock your child's potential with our educational toys. Spark curiosity and ignite a love for learning through play.</p>
@@ -25,11 +25,11 @@ const Banner = () => {
 
         </div>
 
-        <div className='space-y-5'>
+        <div data-aos="fade-right" data-aos-duration="1000" className='space-y-5'>
 
-         <div className='flex justify-evenly bg-green-200 text-green-700 rounded-lg h-40 items-center p-3'>
-          <img className='h-full' src= {mathkid} alt="" />
-          <h1 className='text-2xl font-extrabold text-'>Scientist Toys</h1>
+         <div  className='flex justify-evenly bg-green-200 text-green-700 rounded-lg h-40 items-center p-3'>
+          <img   className='h-full' src= {mathkid} alt="" />
+          <h1  className='text-2xl font-extrabold text-'>Scientist Toys</h1>
 
 
 

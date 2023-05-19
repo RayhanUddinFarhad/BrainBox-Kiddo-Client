@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const ShopItems = ({data}) => {
     return (
         <div>
-            <div className=" card h-full shadow p-10 rounded-xl">
+            <div data-aos="zoom-in-up" data-aos-duration="1000" className=" card h-full shadow p-10 rounded-xl">
   <figure><img className='w-52' src= {data.photo}  /></figure>
   <div className="text-center space-y-5 card-body">
     <h2 className="font-bold text-2xl"> {data.name}</h2>

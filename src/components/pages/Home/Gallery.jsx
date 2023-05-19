@@ -5,9 +5,9 @@ import img3 from '../../../assets/images/Gallery3.png'
 
 const Gallery = () => {
     return (
-        <div>
+        <div data-aos="zoom-in" data-aos-duration="3000">
 
-            <div className='border-b-4 border-red-400 lg:mx-96'>
+            <div  className='border-b-4 border-red-400 lg:mx-96'>
 
             <h1 className='text-center text-3xl font-bold my-2'>Kiddo Gallery</h1>
 
