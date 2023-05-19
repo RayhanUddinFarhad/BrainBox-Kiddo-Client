@@ -3,6 +3,7 @@ import { AuthContext } from '../../provider/AuthProvider';
 import { Form, useLoaderData } from 'react-router-dom';
 import Toy from '../myToys/Toy';
 import Loader from '../../shared/Loader';
+import { useTitle } from '../../hooks/useTitle';
 
 const AllToys = () => {
 
@@ -10,6 +11,8 @@ const AllToys = () => {
 const [data, setData] = useState([])
    const {user} = useContext(AuthContext)
    const [loading, setLoading] = useState(false)
+
+   useTitle ('All  Toys')
 
 
 

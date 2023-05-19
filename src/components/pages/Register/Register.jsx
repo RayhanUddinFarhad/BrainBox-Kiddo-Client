@@ -1,11 +1,17 @@
 import React, { useContext } from 'react';
-import { Form, Link } from 'react-router-dom';
+import { Form, Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 import kid from '../../../assets/images/registerKid.png'
+import { useTitle } from '../../hooks/useTitle';
 
 const Register = () => {
 const {register} = useContext (AuthContext)
+const location = useLocation()
+const navigate = useNavigate()
+const from = location.state?.from?.pathname || '/';
+
+useTitle ('register')
 
 
 
@@ -35,6 +41,9 @@ const {register} = useContext (AuthContext)
 
                 displayName : name, photoURL :photo
             })
+
+            navigate (from, { replace: true })
+
 
 
             console.log (currentUser)

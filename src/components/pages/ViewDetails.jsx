@@ -1,11 +1,14 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { FaDollarSign, FaStar } from "react-icons/fa";
+import { useTitle } from '../hooks/useTitle';
 
 
 const ViewDetails = () => {
 
     const data = useLoaderData()
+
+    useTitle ('View Details')
     return (
         <>
         

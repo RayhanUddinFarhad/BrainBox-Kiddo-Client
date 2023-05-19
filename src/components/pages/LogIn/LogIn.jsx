@@ -4,6 +4,7 @@ import { Form, Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
 import { FcGoogle } from "react-icons/fc";
 import kid from '../../../assets/images/kidLogIn.png'
+import { useTitle } from '../../hooks/useTitle';
 
 
 const LogIn = () => {
@@ -13,6 +14,8 @@ const LogIn = () => {
     const location = useLocation()
     const navigate = useNavigate()
     const from = location.state?.from?.pathname || '/';
+
+    useTitle  ('Login')
 
 
 

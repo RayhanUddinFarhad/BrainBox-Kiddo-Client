@@ -62,71 +62,47 @@ const Update = () => {
     return (
         <div>
 
-        <div className='w-full'>
-
-
-            <div className='mx-auto card w-[1140px] shadow-sm bg-base-100 my-20 '>
-
-
-
-                <Form onSubmit={handleUpdate}  className='card-body space-y-10'>
-
-
-
-                   
-
-
-                   
-
-                   
-
-                    <div className='flex space-x-5'>
-
-
-
-
-
-
-
-                        <input type="text" name='price' defaultValue={data.price} placeholder="Price" className="input w-full" />
-
-                    </div>
-
-
-                    <div className='flex space-x-5'>
-
-
-
-
-
-
-
-                        <input type="text" defaultValue={data.quantity} name='quantity' placeholder="Quantity" className="input w-full" />
-                        <input type="text" defaultValue={data.description} name='description' placeholder="Description" className="textarea textarea-bordered textarea-lg w-full " />
-
-                    </div>
-
-
-
-                    <button className='button-primary'>
-
-                       Add Toy
-                    </button>
-
-
-
-
-
-
-                </Form>
-
-
-
-
-
-
-            </div>
+<div className="flex items-center justify-center h-screen">
+  <div className="w-full max-w-lg bg-white rounded-lg shadow-lg">
+    <form onSubmit={handleUpdate} className="px-8 py-6 space-y-6">
+      <h2 className="text-2xl font-bold text-center">Update Toy</h2>
+      <div className="space-y-4">
+        <div className="flex space-x-4">
+          <input
+            type="text"
+            name="price"
+            defaultValue={data.price}
+            placeholder="Price"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+          />
         </div>
+        <div className=" space-y-4">
+          <input
+            type="text"
+            defaultValue={data.quantity}
+            name="quantity"
+            placeholder="Quantity"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+          />
+          <textarea
+            type="text"
+            defaultValue={data.description}
+            name="description"
+            placeholder="Description"
+            className="textarea order border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+          />
+        </div>
+      </div>
+      <button
+        type="submit"
+        className="w-full py-2 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-700 focus:outline-none focus:bg-blue-700"
+      >
+        Update Toy
+      </button>
+    </form>
+  </div>
+</div>
+
 
     </div>
     );

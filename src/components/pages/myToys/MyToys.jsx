@@ -4,11 +4,14 @@ import Toy from './Toy';
 import { AuthContext } from '../../provider/AuthProvider';
 import MyToy from './MyToy';
 import Swal from 'sweetalert2';
+import { useTitle } from '../../hooks/useTitle';
 
 const MyToys = () => {
 
     const {user} = useContext(AuthContext)
     const [data, setData] = useState([])
+
+    useTitle('My Toys')
 
 
 
