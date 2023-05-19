@@ -19,8 +19,25 @@ const MyToys = () => {
       .then (res => res.json())
       .then (data =>setData (data))
 
-    }, [data])
+    }, [])
 
+
+
+
+    const handleLowestPrice = () => {
+
+
+      fetch (`http://localhost:3000/lowest/${user?.email}`)
+      .then (res => res.json())
+      .then (data => setData (data))
+    }
+    const handleHighestPrice = () => {
+
+
+      fetch (`http://localhost:3000/highest/${user?.email}`)
+      .then (res => res.json())
+      .then (data => setData (data))
+    }
 
 
     
@@ -33,6 +50,17 @@ const MyToys = () => {
 
     return (
         <div>
+
+
+          <div className='flex justify-center my-10 space-x-5'>
+
+            <button onClick={handleLowestPrice} className='button-primary'>Lowest  Price</button>
+            <button onClick={handleHighestPrice} className='button-secondary'>Highest Price</button>
+
+
+
+
+          </div>
 
 
 <div className="overflow-x-auto w-full">

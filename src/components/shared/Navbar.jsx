@@ -86,7 +86,7 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end hidden lg:flex"> {
 
-                    user ? <button onClick={handleLogOut} className="bg-[#fdeaee] p-2  font-bold text-red-500 rounded-lg mr-2" >Log Out</button> : <Link to="/logIn" className="button-primary">Log In</Link>
+                    user ? <button onClick={handleLogOut} className="button-secondary" >Log Out</button> : <Link to="/logIn" className="button-primary">Log In</Link>
 
                 }
 

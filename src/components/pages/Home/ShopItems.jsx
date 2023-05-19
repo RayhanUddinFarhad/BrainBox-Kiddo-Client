@@ -5,22 +5,7 @@ import { Link } from 'react-router-dom';
 const ShopItems = ({data}) => {
     return (
         <div>
-            {/* <div  className=" card h-full shadow p-10 rounded-xl">
-  <figure><img className='w-52' src= {data.photo}  /></figure>
-  <div className="text-center space-y-5 card-body">
-    <h2 className="font-bold text-2xl"> {data.name}</h2>
-    <h2 className="font-bold text-xl text-red-400"> {data.price}</h2>
-    <h2 className='flex items-center justify-center font-bold'> <FaStar className='text-yellow-500'></FaStar>
-      {data.rating}</h2>
-    
-    <div className="card-actions justify-end">
-
-      <Link to={`/viewDetails/${data._id}`}>      <button className="bg-indigo-50 text-indigo-500 p-2 rounded-lg font-bold">View Details</button>
-</Link>
-    </div>
-  </div>
-</div>
-             */}
+       
 
 
 
