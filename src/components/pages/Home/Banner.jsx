@@ -9,9 +9,9 @@ import engineerKid from '../../../assets/images/engineerKid2.png'
 const Banner = () => {
   return (
     <div>
-      <div className='grid lg:grid-cols-3 gap-5'>
+      <div className='lg:grid lg:grid-cols-3 gap-5'>
 
-        <div className='lg:flex col-span-2  items-center bg-pink-50'>
+        <div className='lg:flex col-span-2   items-center bg-pink-50'>
 
 
           <img data-aos="fade-right" data-aos-duration="2000" className='lg:w-1/2  ' src={banne2} alt="" />
@@ -25,11 +25,11 @@ const Banner = () => {
 
         </div>
 
-        <div data-aos="fade-right" data-aos-duration="1000" className='space-y-5'>
+        <div data-aos="fade-right" data-aos-duration="1000" className='space-y-5 '>
 
          <div  className='flex justify-evenly bg-green-100 text-green-700 rounded-lg h-40 items-center p-3'>
           <img   className='h-full' src= {mathkid} alt="" />
-          <h1  className='text-2xl font-extrabold text-'>Scientist Toys</h1>
+          <h1  className='text-2xl font-extrabold '>Scientist Toys</h1>
 
 
 

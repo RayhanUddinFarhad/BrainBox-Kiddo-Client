@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import ShopItems from './ShopItems';
+import underline from '../../../assets/images/underline.png'
 
 const Shop = () => {
 
@@ -36,9 +37,9 @@ const Shop = () => {
 
     return (
         <>
-         <div className='border-b-2 border-red-400 px-10 mr-52'>
+         <div className='border-b-4  border-red-400 px-10 '>
 
-<h1 className='text-left text-3xl font-bold my-5'> <span className='text-red-400'>Kiddo</span> Shops</h1>
+<h1 className='text-left text-2xl font-bold my-5'> <span className='text-red-400'>Kiddo</span> Shops</h1>
 
 </div>
 

@@ -7,9 +7,9 @@ const Gallery = () => {
     return (
         <div data-aos="zoom-in" data-aos-duration="3000">
 
-            <div  className='border-b-4 border-red-400 w-3 lg:mx-96'>
+            <div  className='border-b-4 border-red-400  '>
 
-            <h1 className='text-center text-3xl font-bold my-2'>Kiddo Gallery</h1>
+            <h1 className='text-left text-2xl font-bold my-2'><span className='text-red-400 px-5'>Kiddo</span> Gallery</h1>
 
             </div>
 
