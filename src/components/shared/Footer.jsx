@@ -14,7 +14,7 @@ const Footer = () => {
                         <img className='w-20' src={logo} alt="" />
                         <h4 className='text-3xl font-extrabold'>Brainbox<span className='text-red-400'>Kiddo</span></h4>
                     </div>    
-                    <p className='flex items-center'><FaRegCopyright></FaRegCopyright> Copyright 2023 by Rayhan Uddin Farhad</p>
+                    <p className='flex items-center'><FaRegCopyright></FaRegCopyright> Copyright 2023 Alright reserved by BraindboxKiddo</p>
                     <p>Mirpur 11, Dhaka, Bangladesh</p>
                     <p>Mobile : 01791403364</p>
                     <p>Emal : Rayhanuddinfarhad11@gmail.com</p>
