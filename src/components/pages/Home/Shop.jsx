@@ -45,7 +45,7 @@ const Shop = () => {
 
         <div className='flex justify-around'>
   <Tabs className= 'space-y-10 my-5' defaultIndex={0}>
-    <TabList className= 'flex justify-center space-x-10 tabs tabs-boxed'>
+    <TabList className= 'flex justify-center space-x-10 tabs tabs-boxed bg-red-400 text-white font-bold'>
       <Tab defaultChecked  onClick={() => handleTabClick('science')} >Science Toys</Tab>
       <Tab onClick={() => handleTabClick ('math')} > Math Toys</Tab>
       <Tab onClick={() => handleTabClick ('engineer')} > Engineering Toys</Tab>

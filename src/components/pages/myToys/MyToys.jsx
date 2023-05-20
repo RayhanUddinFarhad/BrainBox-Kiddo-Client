@@ -10,6 +10,7 @@ const MyToys = () => {
 
     const {user} = useContext(AuthContext)
     const [data, setData] = useState([])
+    const [error, setErrr] = useState  ('')
 
     useTitle('My Toys')
 
@@ -42,6 +43,7 @@ const MyToys = () => {
       .then (data => setData (data))
     }
 
+    
 
     
 
@@ -67,6 +69,13 @@ const MyToys = () => {
 
 
 <div className="overflow-x-auto w-full">
+
+
+
+
+
+
+
   <table className="table w-full">
     {/* head */}
     <thead>
@@ -84,6 +93,10 @@ const MyToys = () => {
         <th>Action</th>
       </tr>
     </thead>
+
+
+
+    
     <tbody>
       {/* row 1 */}
 

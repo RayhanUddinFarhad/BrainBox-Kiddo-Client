@@ -9,7 +9,7 @@ const Toy = ({data}) => {
 
     return (
              <tr>
-        <th>{data.Sellername}</th>
+        <td>{data.Sellername}</td>
         <td>{data.name}</td>
         <td>{data.selectedSubCategory}</td>
         <td>{data.price}</td>

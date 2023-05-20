@@ -6,7 +6,7 @@ import { FaDonate, FaHeadphones, FaMoneyBill, FaTruck } from 'react-icons/fa';
 
 const WhychooseUs = () => {
     return (
-        <div  className='grid lg:grid-cols-2 bg-sky-50 p-5'>
+        <div  className='grid lg:grid-cols-2 gap-10 bg-sky-50 p-5'>
 
 
             <div data-aos="fade-right" data-aos-duration="2000"  >
@@ -19,7 +19,6 @@ const WhychooseUs = () => {
             <div data-aos="fade-left" data-aos-duration="2000" className='space-y-5'>
 
                 <h1 className='text-3xl font-bold'>Why You choose us?</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus architecto veniam et nemo accusamus!</p>
 
 
                 <div className='flex items-center space-x-5'>

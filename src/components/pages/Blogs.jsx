@@ -12,9 +12,9 @@ const Blogs = () => {
                 <h1 className='font-bold text-2xl'>1. What is an access token and refresh token? </h1>
                 <p>Access Token: An access token is a credential that is used to authenticate and authorize a user's access to protected resources in an application. It typically contains information about the user and their permissions, and it has a limited lifespan. Access tokens are usually issued by an authentication server upon successful login and are included in each request to access protected resources.
                     Access tokens should be stored securely on the client-side, typically in memory or in a secure storage mechanism like browser storage (e.g., localStorage or sessionStorage).
-                    <br />
+                    <br /> <br />
                     Refresh Token: A refresh token is a credential that is used to obtain a new access token after the previous one expires. Refresh tokens have a longer lifespan compared to access tokens. When an access token expires, the client can use the refresh token to request a new access token without requiring the user to log in again.
-                    Refresh tokens should be stored securely on the client-side as well, but in a more persistent storage mechanism such as an HTTP-only cookie or secure storage (e.g., secure browser cookie, secure key-value store). </p>
+                    Refresh tokens should be stored securely on the client-side as well, but in a more persistent storage mechanism such as an HTTP-only cookie or secure storage (e.g. secure browser cookie, secure key-value store). </p>
             </div>
 
 
