@@ -35,7 +35,7 @@ const AddToys = () => {
     const description = form.description.value;
 
     const allFields = {
-      name, photo, Sellername, selleremail, price, rating, quantity, description,
+      name, photo, Sellername, selleremail, price : parseFloat(price), rating, quantity, description,
       selectedSubCategory
 
 
@@ -133,7 +133,7 @@ const AddToys = () => {
               </div>
               <div className="flex space-x-4">
                 <input
-                  type="text"
+                  type="number"
                   name="price"
                   placeholder="Price"
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
@@ -152,7 +152,7 @@ const AddToys = () => {
                   placeholder="Quantity"
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
                 />
-                <input
+                <textarea
                   type="text"
                   name="description"
                   placeholder="Description"

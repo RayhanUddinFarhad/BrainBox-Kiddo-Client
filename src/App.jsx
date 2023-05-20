@@ -24,7 +24,7 @@ function App() {
     <div>
 
       <Navbar></Navbar>
-      <div className=' overflow-x-hidden lg:px-10 md:min-h-[calc(100vh-341px)]'>
+      <div className=' overflow-x-hidden overflow-y-hidden container mx-auto md:min-h-[calc(100vh-341px)]'>
 
       <Outlet></Outlet>
 

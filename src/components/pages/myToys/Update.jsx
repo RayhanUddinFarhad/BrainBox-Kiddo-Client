@@ -21,7 +21,7 @@ const Update = () => {
         const quantity = form.quantity.value
         const description = form.description.value
         const all = {
-            price, quantity, description
+           price : parseInt(price), quantity, description
         }
 
         console.log(all)
@@ -69,7 +69,7 @@ const Update = () => {
       <div className="space-y-4">
         <div className="flex space-x-4">
           <input
-            type="text"
+            type="number"
             name="price"
             defaultValue={data.price}
             placeholder="Price"

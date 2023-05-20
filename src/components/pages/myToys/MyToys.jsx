@@ -10,7 +10,6 @@ const MyToys = () => {
 
     const {user} = useContext(AuthContext)
     const [data, setData] = useState([])
-    const [error, setErrr] = useState  ('')
 
     useTitle('My Toys')
 

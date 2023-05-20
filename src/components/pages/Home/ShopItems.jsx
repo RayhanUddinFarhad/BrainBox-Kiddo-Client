@@ -9,7 +9,7 @@ const ShopItems = ({data}) => {
 
 
 
-<div className="max-w-xs bg-white shadow-lg rounded-lg overflow-hidden h-full">
+<div className="max-w-xs bg-white shadow rounded-lg overflow-hidden h-full">
   <img className="w-full h-48 object-cover" src= {data.photo} alt="Toy Image" />
   <div className="px-6 py-4">
     <div className="font-bold text-xl mb-2">{data.name}</div>
