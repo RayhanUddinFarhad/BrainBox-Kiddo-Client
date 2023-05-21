@@ -6,7 +6,9 @@ b7a10-chef-recipe-hunter-client-side-RayhanUddinFarhad created by GitHub Classro
 
 # BrainKiddo website
 
-The BrainKiddo website is a platform dedicated to educational learning toys. It offers a wide range of toys that focus on scientific concepts, mathematics skills, and engineering principles. The website provides users with a user-friendly interface, allowing them to easily access toy details, add new toys to the collection, and manage their own toy listings. Users can also log in and register to personalize their experience on the website.## Features
+The BrainKiddo website is a platform dedicated to educational learning toys. It offers a wide range of toys that focus on scientific concepts, mathematics skills, and engineering principles. The website provides users with a user-friendly interface, allowing them to easily access toy details, add new toys to the collection, and manage their own toy listings. Users can also log in and register to personalize their experience on the website.
+
+## Features
 
 **User-Friendly UI: The website provides a user-friendly interface that is easy to navigate, ensuring a seamless browsing experience for users.**
 
@@ -24,16 +26,21 @@ Check out the live website at: https://brainboxkiddo.web.app
 
 ## Technology
 
-The My Toy website is built using the following technologies:
+The BrainKiddo website is built using the following technologies:
 
-Front-end: React.js framework
-Routing: React Router
-State Management: React Context API 
-UI Design: Tailwind
-Backend: Node.js with Express.js framework
-Database: MongoDB for storing toy data
-Authentication: JWT (JSON Web Tokens) for user authentication and authorization
-Deployment: Firebase, Vercel
+**Front-end: React.js framework**
+
+**Routing: React Router**
+
+**State Management: React Context API**
+
+**UI Design: Tailwind**
+
+**Backend: Node.js with Express.js framework**
+
+**Database: MongoDB for storing toy data**
+
+**Deployment: Firebase, Vercel**
 
 
 
