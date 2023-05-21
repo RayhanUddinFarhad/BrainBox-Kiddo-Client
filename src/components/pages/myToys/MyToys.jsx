@@ -58,7 +58,7 @@ const MyToys = () => {
 
           <div className='flex justify-center my-10 space-x-5'>
 
-            <button onClick={handleLowestPrice} className='button-primary'>Lowest  Price</button>
+            <button onClick={handleLowestPrice} className='button-secondary'>Lowest  Price</button>
             <button onClick={handleHighestPrice} className='button-secondary'>Highest Price</button>
 
 
