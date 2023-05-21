@@ -9,7 +9,7 @@ const MyToy = ({ data, setData }) => {
   const handleDelete = (id) => {
     Swal.fire({
       title: 'Are you sure?',
-      text: "You won't be able to revert this!",
+      text: "You want to delete this item?",
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
@@ -30,7 +30,7 @@ const MyToy = ({ data, setData }) => {
             console.log(error);
           });
 
-        Swal.fire('Deleted!', 'Your file has been deleted.', 'success');
+        Swal.fire('Deleted!', 'Your item has been deleted.', 'success');
       }
     });
 

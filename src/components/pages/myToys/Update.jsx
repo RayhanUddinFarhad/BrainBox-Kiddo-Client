@@ -45,7 +45,7 @@ const Update = () => {
 
                 Swal.fire(
                     'Good job!',
-                    'Data Updated successFull!',
+                    'Item Updated successFull!',
                     'success'
                   )
 
