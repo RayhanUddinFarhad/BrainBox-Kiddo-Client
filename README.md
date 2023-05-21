@@ -28,13 +28,13 @@ Check out the live website at: https://brainboxkiddo.web.app
 
 The BrainKiddo website is built using the following technologies:
 
-Front-end: React.js framework
-Routing: React Router
-State Management: React Context API 
-UI Design: Tailwind
-Backend: Node.js with Express.js framework
-Database: MongoDB for storing toy data
-Deployment: Firebase, Vercel
+**Front-end: React.js framework**
+**Routing: React Router**
+**State Management: React Context API**
+**UI Design: Tailwind**
+**Backend: Node.js with Express.js framework**
+**Database: MongoDB for storing toy data**
+**Deployment: Firebase, Vercel**
 
 
 
