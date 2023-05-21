@@ -13,7 +13,7 @@ const ShopItems = ({data}) => {
   <img className="w-full h-48 object-cover" src= {data.photo} alt="Toy Image" />
   <div className="px-6 py-4">
     <div className="font-bold text-xl mb-2">{data.name}</div>
-    <p className="text-gray-700 text-base">${data.price}</p>
+    <p className=" font-bold button-secondary">${data.price}</p>
     <div className="flex items-center mt-4">
      <FaStar className='text-yellow-500'></FaStar>
       <p className="text-gray-700">4.5</p>
