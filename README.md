@@ -6,7 +6,9 @@ b7a10-chef-recipe-hunter-client-side-RayhanUddinFarhad created by GitHub Classro
 
 # BrainKiddo website
 
-The BrainKiddo website is a platform dedicated to educational learning toys. It offers a wide range of toys that focus on scientific concepts, mathematics skills, and engineering principles. The website provides users with a user-friendly interface, allowing them to easily access toy details, add new toys to the collection, and manage their own toy listings. Users can also log in and register to personalize their experience on the website.## Features
+The BrainKiddo website is a platform dedicated to educational learning toys. It offers a wide range of toys that focus on scientific concepts, mathematics skills, and engineering principles. The website provides users with a user-friendly interface, allowing them to easily access toy details, add new toys to the collection, and manage their own toy listings. Users can also log in and register to personalize their experience on the website.
+
+## Features
 
 **User-Friendly UI: The website provides a user-friendly interface that is easy to navigate, ensuring a seamless browsing experience for users.**
 
