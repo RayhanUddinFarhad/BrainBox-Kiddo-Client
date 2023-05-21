@@ -20,10 +20,10 @@ const Review = ({review}) => {
 
 
 </p>
-<div className='px-10'>
+<div className=''>
 
 <h1 className='text-xl font-bold'>{review.name}</h1>
-<p>{review.review}</p>
+<p className=''>{review.review}</p>
 
 
 </div>
