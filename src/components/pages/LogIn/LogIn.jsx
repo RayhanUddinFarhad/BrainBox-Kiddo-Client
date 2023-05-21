@@ -116,15 +116,13 @@ const LogIn = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input required name='password' type="text" placeholder="password" className="input input-bordered" />
-                                <label className="label">
-                                    <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                                </label>
+                                <input required name='password' type="password" placeholder="password" className="input input-bordered" />
+                               
                             </div>
                             <div className="form-control mt-6">
                                 <button className="button-primary">Login</button>
                             </div>
-                            <p>New to here? <Link className='btn-link' to = "/register">Register</Link></p>
+                            <p>New to Brain<span className='text-red-400 font-bold'>Kiddo</span>? <Link className='btn-link' to = "/register">Register</Link></p>
                         </Form>
 
                         <button onClick={handleGoogleLogin} className='flex items-center text-center mx-auto p-5 border rounded-lg my-2'>
