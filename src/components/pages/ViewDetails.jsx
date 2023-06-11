@@ -1,7 +1,11 @@
-import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import { FaAt, FaDollarSign, FaStar, FaUser, FaUserAlt, FaVoicemail } from "react-icons/fa";
 import { useTitle } from '../hooks/useTitle';
+import axios from 'axios';
+import { AuthContext } from '../provider/AuthProvider';
+import Swal from 'sweetalert2';
+import useCarts from '../hooks/useCarts';
 
 
 const ViewDetails = () => {
@@ -9,6 +13,75 @@ const ViewDetails = () => {
     const data = useLoaderData()
 
     useTitle('View Details')
+    const {user} = useContext (AuthContext)
+    const navigate = useNavigate(AuthContext)
+    const [, refetch] = useCarts()
+
+
+
+
+    const handleAddToCart = (product) => {
+
+
+        console.log(product);
+
+
+
+        const items = {foodId : product._id, name : product.name , photo : product.photo, price : product.price, category : product.selectedCategory, email : user.email}
+
+
+        if (user) {
+
+
+            fetch (`http://localhost:3000/carts/`,
+        {
+
+            method : 'POST',
+
+            headers : {
+                'content-type': 'application/json'
+            },
+
+            body : JSON.stringify (items)
+
+            
+
+        })
+        .then (res => res.json())
+        .then (data => {console.log(data)
+        
+        
+        refetch()})
+
+
+        }
+
+        else {
+
+            Swal.fire({
+                title: 'Please logIn to add to cart',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  Swal.fire(
+
+                    navigate ('/logIn')
+                   
+                  )
+                }
+              })
+
+
+
+        }
+
+
+
+     }
     return (
         <>
 
@@ -38,6 +111,8 @@ const ViewDetails = () => {
                         <p className="text-5xl text-red-400 flex my-5">
                             Price: <FaDollarSign></FaDollarSign> {data.price}
                         </p>
+
+                        <button onClick={() => handleAddToCart (data)} className='button-primary'>Add To cart</button>
 
 
                         <div className='py-6 space-y-2'>

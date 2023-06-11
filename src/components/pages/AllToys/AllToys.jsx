@@ -70,7 +70,7 @@ const [data, setData] = useState([])
         </div>
         </div>
         <div className="overflow-x-auto">
-          <table className="table w-full">
+          <table className=" table-compact w-full">
             {/* head*/}
             <thead>
               <tr>

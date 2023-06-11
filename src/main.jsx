@@ -18,6 +18,18 @@ import Update from './components/pages/myToys/Update.jsx';
 import PrivateRoutes from './components/Routes/PrivateRoutes.jsx'
 import ErrorPage from './components/pages/ErrorPage.jsx';
 import Blogs from './components/pages/Blogs.jsx';
+import {
+  useQuery,
+  useMutation,
+  useQueryClient,
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
+import Cart from './components/pages/Cart/Cart.jsx';
+
+
+const queryClient = new QueryClient()
+
 
 const router = createBrowserRouter([
   {
@@ -77,9 +89,20 @@ const router = createBrowserRouter([
       },
 
       {
+        path : "/carts",
+        element : <Cart></Cart>
+
+      },
+
+      {
 
         path : "/blogs",
         element :  <Blogs></Blogs>
+      },
+
+      {
+        path : "/carts",
+        element : <Cart></Cart>
       }
     ]
   },
@@ -94,7 +117,12 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
 
-    <AuthProvider>    <RouterProvider router={router} />
+    <AuthProvider>    
+
+      <QueryClientProvider  client={queryClient}>
+
+      <RouterProvider router={router} />
+      </QueryClientProvider>
     </AuthProvider>
   </React.StrictMode>,
 )

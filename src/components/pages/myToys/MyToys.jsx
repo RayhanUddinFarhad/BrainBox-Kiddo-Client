@@ -73,7 +73,7 @@ const MyToys = () => {
 
 
 
-  <table className="table w-full">
+  <table className="table-xs w-full">
     {/* head */}
     <thead>
       <tr>
